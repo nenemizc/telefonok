@@ -42,15 +42,26 @@ export default function Phones(){
             <h2>Telefonok lista</h2>
             <table>
                 <thead>
-                    <tr>Név</tr>
-                    <tr>Ár</tr>
-                    <tr>Memória</tr>
-                    <tr>Tárhely</tr>
-                    <tr>Kijelző</tr>
-                    <tr>Operációs rendszer</tr>
+                    <tr>
+                        <td>Név</td>
+                        <td>Ár</td>
+                        <td>Memória</td>
+                        <td>Tárhely</td>
+                        <td>Kijelző</td>
+                        <td>Operációs rendszer</td>
+                    </tr>
                 </thead>
                 <tbody>
-
+                    {telefonok.map((telefon)=>(
+                    <tr key={telefon.id}>
+                        <td>{telefon.nev}</td>
+                        <td>{telefon.ar}</td>
+                        <td>{telefon.memoria}</td>
+                        <td>{telefon.tarhely}</td>
+                        <td>{telefon.kijelzo}</td>
+                        <td>{telefon.operaciosRendszer}</td>
+                    </tr>
+                    ))}
                 </tbody>
             </table>
         </>
